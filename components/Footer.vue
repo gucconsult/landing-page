@@ -1,15 +1,12 @@
 <template>
-  <footer class="relative bottom-0 bg-gu-navy text-gu-white py-3 items-center gap-1 text-center">
-    <span class="px-2">©</span>
-    <span class="text-sm">{{ year }} {{ name }}</span>
+  <footer class="items-center gap-1 py-4 text-center bg-gu-navy text-gu-white">
+    <span class="px-2">&copy;</span>
+    <span class="text-sm">{{ year }} GlowUp Career Consultant</span>
   </footer>
 </template>
 
 <script lang="ts" setup>
 const year = new Date().getFullYear()
-const name = 'GlowUp Career Consultant'
 </script>
 
-<style>
-
-</style>
+<style></style>
