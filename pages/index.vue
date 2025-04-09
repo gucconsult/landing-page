@@ -1,8 +1,11 @@
 <template>
-  <Welcome />
+  <Navbar />
+  <div class="h-dvh"></div>
+  <Footer />
 </template>
 
 <script lang="ts" setup>
-import Welcome from '~/components/Welcome.vue';
+import Footer from '~/components/Footer.vue';
+import Navbar from '~/components/Navbar.vue';
 
 </script>
