@@ -2,4 +2,8 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
+  --color-gu-navy: #27374E;
+  --color-gu-yellow: #FF9A00;
+  --color-gu-white: #FBF8F3;
+  --color-gu-dark: #1D1D1D;
 }
