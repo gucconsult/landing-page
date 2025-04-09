@@ -6,4 +6,9 @@
   --color-gu-yellow: #FF9A00;
   --color-gu-white: #FBF8F3;
   --color-gu-dark: #1D1D1D;
+  --color-primary: #27374e;
+  --color-secondary: #ff9a00;
+  --color-muted: #e4e6ea;
+  --bg-primary: #27374e;
+  --bg-secondary: #ff9a00;
 }
