@@ -64,4 +64,9 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxt/fonts"],
+  fonts: {
+    defaults: {
+      weights: ["400", "500", "600", "700", "800", "900"],
+    },
+  },
 });
