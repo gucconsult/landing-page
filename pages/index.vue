@@ -1,7 +1,7 @@
 <template>
   <Navbar />
   <Hero />
-  <main class="mt-10 md:mt-20">
+  <main class="mt-20">
     <Feature />
     <PricingList />
     <AboutUs />

@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <img src="../assets/img/banner.webp" alt="banner" class="w-dvw mx-auto mt-20">
+    <img src="../assets/images/banner.webp" alt="banner" class="w-full mx-auto mt-19">
   </div>
 </template>
 
