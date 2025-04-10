@@ -1,6 +1,7 @@
 <template>
   <SectionLayout bgColor="bg-primary">
-    <Heading title="Layanan yang kami sediakan" subtitle="Pilih layanan yang sesuai dengan kebutuhanmu" />
+    <Heading variant="white" title="Layanan yang kami sediakan"
+      subtitle="Pilih layanan yang sesuai dengan kebutuhanmu" />
     <div
       class="grid w-full grid-cols-1 gap-5 mt-8 place-items-center sm:place-items-stretch sm:grid-cols-2 lg:grid-cols-4">
       <template v-for="service in servicesPrice" :key="service.id">
@@ -8,10 +9,12 @@
           :isShowMore="service.benefits.length > LIMIT" />
       </template>
     </div>
-    <Button>
-      Lihat semua
-      <Arrow />
-    </Button>
+    <div class="w-full flex justify-center lg:justify-end mt-5">
+      <Button>
+        Lihat semua
+        <Arrow />
+      </Button>
+    </div>
   </SectionLayout>
 </template>
 
@@ -21,6 +24,6 @@ import Heading from '~/components/ui/Heading.vue';
 import PricingCard from '~/components/ui/PricingCard.vue';
 import Arrow from '~/components/icon/Arrow.vue';
 import Button from '~/components/ui/Button.vue';
-import { servicesPrice } from '~/data/services.ts';
+import { servicesPrice } from '~/data/data';
 const LIMIT = 7
 </script>
