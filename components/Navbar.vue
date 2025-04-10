@@ -20,7 +20,7 @@
           <img src="../assets//images/menu-button.svg" alt="Menu" class="h-8">
         </label>
         <ul
-          class="fixed inset-0 pt-2 mt-21 transition-all hidden duration-75 ease-in-out bg-slate-800 peer-checked:block h-fit -z-10 md:translate-y-0 md:block md:relative md:mt-0 md:pt-0 md:bg-transparent md:z-20 md:h-auto md:w-fit">
+          class="fixed inset-0 pt-2 mt-19 transition-all hidden duration-75 ease-in-out bg-slate-800 peer-checked:block h-fit -z-10 md:translate-y-0 md:block md:relative md:mt-0 md:pt-0 md:bg-transparent md:z-20 md:h-auto md:w-fit">
           <li
             class="flex flex-col px-6 py-2 space-y-4 shadow-md md:bg-transparent md:shadow-none md:px-0 md:py-0 md:items-center md:flex-row md:space-y-0 md:gap-5 xl:gap-10">
             <a href="" class="hover:text-secondary active:text-secondary">Beranda</a>
