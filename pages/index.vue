@@ -1,6 +1,8 @@
 <template>
   <Navbar />
-  <main class="mt-20">
+  <Hero />
+  <main class="mt-10 md:mt-20">
+    <Feature />
     <PricingList />
     <AboutUs />
     <Testimoni />
@@ -11,6 +13,8 @@
 
 <script lang="ts" setup>
 import Footer from '~/components/Footer.vue';
+import Hero from '~/components/Hero.vue';
+import Feature from '~/components/Feature.vue';
 import Navbar from '~/components/Navbar.vue';
 import PricingList from '~/components/PricingList';
 import AboutUs from '~/components/AboutUs.vue';
