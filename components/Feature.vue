@@ -1,11 +1,9 @@
 <template>
   <div class="max-w-7xl mx-auto text-dark space-y-14">
-    <!-- <div class="mx-auto px-4 text-center md:text-justify">
-      <h1 class="font-semibold text-2xl">Kami akan menemani perjalanan sukses anda</h1>
-      <h2 class="text-base">Di sini anda akan mendapatkan layanan berupa</h2>
-    </div> -->
+    <div class="mx-auto px-4 text-center md:text-justify">
+      <UiHeading title="Kami akan menemani perjalanan sukses anda" subtitle="Di sini anda akan mendapatkan layanan berupa"" />
+    </div>
 
-    <UiHeading title="Kami akan menemani perjalanan sukses anda" subtitle="Di sini anda akan mendapatkan layanan berupa"" />
     <div class="grid grid-cols-1 text-justify justify-between mb-20 md:grid-cols-3">
       <div class="px-5 py-5 text-base max-w-sm">
         <img src="../assets/images/career.svg" alt="career" class="h-12 mb-5">
