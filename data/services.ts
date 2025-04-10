@@ -13,7 +13,7 @@ export const servicesPrice: ServicePrice[] = [
     benefits: [
       "Tersedia dalam bahasa indonesia atau bahasa inggris",
       "Review CV lama anda dan koreksi kesalahan",
-      "CV kreatif dan profesional",
+      "CV kreatif atau profesional",
       "Surat lamaran profesional yang terintegrasi dengan isi CV anda",
       "CV dengan format Word yang dapat diedit",
       "Jaminan lolos 100% ATS (Applicant Tracking System)",
