@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <NuxtPage class="font-sans scroll-smooth antialiased" />
   </NuxtLayout>
 </template>
 
