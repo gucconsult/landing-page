@@ -9,7 +9,7 @@
 
       <div class="flex gap-2">
         <a href="#"
-          class="flex items-center gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-orange-500 w-fit md:hidden">
+          class="flex items-center gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-amber-600 w-fit md:hidden">
           <img src="../assets/images/wa.svg" alt="Contact" class="h-4">
           <span>Konsultasi</span>
         </a>
@@ -20,15 +20,15 @@
           <img src="../assets//images/menu-button.svg" alt="Menu" class="h-8">
         </label>
         <ul
-          class="fixed inset-0 pt-2 mt-19 transition-all hidden duration-75 ease-in-out bg-slate-800 peer-checked:block h-fit -z-10 md:translate-y-0 md:block md:relative md:mt-0 md:pt-0 md:bg-transparent md:z-20 md:h-auto md:w-fit">
+          class="fixed inset-0 pt-2 mt-19 transition-all hidden duration-75 ease-in-out bg-slate-800 peer-checked:block h-fit md:translate-y-0 md:block md:relative md:mt-0 md:pt-0 md:bg-transparent md:h-auto md:w-fit">
           <li
-            class="flex flex-col px-6 py-2 space-y-4 shadow-md md:bg-transparent md:shadow-none md:px-0 md:py-0 md:items-center md:flex-row md:space-y-0 md:gap-5 xl:gap-10">
+            class="flex flex-col px-6 py-2 space-y-4 md:bg-transparent md:px-0 md:py-0 md:items-center md:flex-row md:space-y-0 md:gap-5 lg:gap-8">
             <a href="" class="hover:text-secondary active:text-secondary">Beranda</a>
             <a href="" class="hover:text-secondary active:text-secondary">Layanan</a>
             <a href="" class="hover:text-secondary active:text-secondary">Tentang Kami</a>
             <a href="" class="hover:text-secondary active:text-secondary">Testimoni</a>
             <a href="" class="hover:text-secondary active:text-secondary">Kontak</a>
-            <a href="#" class="items-center hidden gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-orange-500  w-fit md:flex">
+            <a href="#" class="items-center hidden gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-amber-600  w-fit md:flex">
               <img src="../assets/images/wa.svg" alt="Contact" class="h-4">
               <span>Konsultasi</span>
             </a>
