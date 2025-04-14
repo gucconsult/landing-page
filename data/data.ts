@@ -2,21 +2,45 @@ import whatsapp from "~/assets/images/whatsapp.svg";
 import instagram from "~/assets/images/instagram.svg";
 import linkedin from "~/assets/images/linkedin.svg";
 import tiktok from "~/assets/images/tiktok.svg";
+import chartLine from "~/assets/images/chart-line.svg";
+import personTie from "~/assets/images/person-tie.svg";
+import money from "~/assets/images/money.svg";
 
 type ServicePrice = {
-  id: Number;
-  title: String;
-  price: String;
-  benefits: Array<String>;
+  id: number;
+  title: string;
+  price: string;
+  benefits: Array<string>;
 };
 
 type Testimoni = {
-  id: Number;
-  name: String;
-  job: String;
-  review: String;
-  date: String;
+  id: number;
+  name: string;
+  job: string;
+  review: string;
+  date: string;
 };
+
+export const features = [
+  {
+    id: 1,
+    title: "Bimbingan Karier",
+    description: "Bimbingan karier sesuai dengan bidang yang ingin anda pilih",
+    icon: chartLine,
+  },
+  {
+    id: 2,
+    title: "Tim Berpengalaman",
+    description: "Tim yang berpengalaman dan profesional siap membantu anda",
+    icon: personTie,
+  },
+  {
+    id: 3,
+    title: "Harga Terjangkau",
+    description: "Harga yang terjangkau dengan tetap mengutamakan kualitas",
+    icon: money,
+  },
+];
 
 export const servicesPrice: ServicePrice[] = [
   {
@@ -80,6 +104,44 @@ export const servicesPrice: ServicePrice[] = [
       "Grup loker terupdate setiap hari",
       "2x seminggu melakukan wawancara secara privat",
     ],
+  },
+];
+
+export const servicePriceUnit = [
+  {
+    id: 1,
+    title: "CV Kreatif",
+    price: "Rp25.000",
+  },
+  {
+    id: 2,
+    title: "CV ATS",
+    price: "Rp30.000",
+  },
+  {
+    id: 3,
+    title: "Surat Lamaran",
+    price: "Rp20.000",
+  },
+  {
+    id: 4,
+    title: "Portofolio Digital",
+    price: "Rp60.000",
+  },
+  {
+    id: 5,
+    title: "Upgrade Linkedin",
+    price: "Rp40.000",
+  },
+  {
+    id: 6,
+    title: "Pelatihan Interview",
+    price: "Rp40.000",
+  },
+  {
+    id: 7,
+    title: "Paket Review",
+    price: "Rp10.000",
   },
 ];
 
