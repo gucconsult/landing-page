@@ -11,7 +11,7 @@ useHead({
     lang: 'id'
   },
   bodyAttrs: {
-    class: 'font-sans antialiased scroll-smooth'
+    class: 'font-sans antialiased'
   },
   link: [
     {
