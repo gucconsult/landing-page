@@ -5,7 +5,7 @@
         <img :src="avatar" class="object-center object-cover w-11 h-11" alt="user">
       </div>
       <div class="flex flex-col">
-        <span class="font-bold text-gray-900">{{ name }}</span>
+        <span class="font-bold text-dark">{{ name }}</span>
         <span class="text-sm text-gray-600">{{ job }}</span>
       </div>
     </div>
