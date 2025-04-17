@@ -1,40 +1,83 @@
 <template>
-  <header
-    class="fixed z-10 top-0 w-full py-2 mx-auto font-sans border-b border-gray-600 bg-primary/95 backdrop-blur-sm text-white">
-    <nav class="flex items-center justify-between w-full px-4 py-2 mx-auto max-w-7xl">
-      <a href="#" class="flex items-center gap-3 font-bold">
-        <img src="../assets/images/logo.webp" alt="GlowUp Career Consultant" class="rounded-full h-11">
-        <span class="hidden lg:block">GlowUp Career Consultant</span>
-      </a>
+  <header class="bg-background/95 backdrop-blur-sm w-full fixed top-0 left-0 z-50 border-b border-gray-700">
+    <nav class="text-white max-w-7xl mx-auto p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <ApplicationName />
+        <div class="flex gap-6 items-center">
+          <div class="hidden md:flex space-x-6">
+            <a v-for="nav in navlinks" :key="nav.href" :href="nav.href" role="navigation"
+              @click.prevent="handleScroll($event)" class="hover:text-yellow-400 transition duration-300 text-sm"
+              aria-label="Navigate to {{ nav.text }}">
+              {{ nav.text }}
+            </a>
+          </div>
 
-      <div class="flex gap-2">
-        <a href="#"
-          class="flex items-center gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-orange-500 w-fit md:hidden">
-          <img src="../assets/images/wa.svg" alt="Contact" class="h-4">
-          <span>Konsultasi</span>
+          <div class="flex items-center space-x-4 lg:space-x-0">
+            <Button as="a" href="https://api.whatsapp.com/send/?phone=6285920284085" :icon="Whatsapp"
+              icon-position="left" :target="'_blank'">
+              Konsultasi
+            </Button>
+
+            <button @click="toggleMenu" class="md:hidden text-white cursor-pointer" aria-label="Toggle menu"
+              aria-labelledby="toggle-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div v-if="isMenuOpen" class="md:hidden space-y-8 p-4 text-center">
+        <a v-for="nav in navlinks" :key="nav.href" :href="nav.href" role="navigation"
+          @click.prevent="handleScroll($event)" class="block hover:text-yellow-400 transition duration-300 text-sm"
+          aria-label="Navigate to {{ nav.text }}">
+          {{ nav.text }}
         </a>
 
-        <input class="hidden peer" type="checkbox" name="menubar" id="menubar">
-        <label for="menubar"
-          class="relative block p-1 transition-all rounded-md cursor-pointer bg-slate-800/50 peer-checked:menubar hover:bg-slate-800 active:bg-slate-900 md:hidden">
-          <img src="../assets//images/menu-button.svg" alt="Menu" class="h-8">
-        </label>
-        <ul
-          class="fixed inset-0 pt-2 mt-19 transition-all hidden duration-75 ease-in-out bg-slate-800 peer-checked:block h-fit -z-10 md:translate-y-0 md:block md:relative md:mt-0 md:pt-0 md:bg-transparent md:z-20 md:h-auto md:w-fit">
-          <li
-            class="flex flex-col px-6 py-2 space-y-4 shadow-md md:bg-transparent md:shadow-none md:px-0 md:py-0 md:items-center md:flex-row md:space-y-0 md:gap-5 xl:gap-10">
-            <a href="" class="hover:text-secondary active:text-secondary">Beranda</a>
-            <a href="" class="hover:text-secondary active:text-secondary">Layanan</a>
-            <a href="" class="hover:text-secondary active:text-secondary">Tentang Kami</a>
-            <a href="" class="hover:text-secondary active:text-secondary">Testimoni</a>
-            <a href="" class="hover:text-secondary active:text-secondary">Kontak</a>
-            <a href="#" class="items-center hidden gap-2 px-4 py-2 font-bold rounded-sm bg-secondary hover:bg-orange-500  w-fit md:flex">
-              <img src="../assets/images/wa.svg" alt="Contact" class="h-4">
-              <span>Konsultasi</span>
-            </a>
-          </li>
-        </ul>
       </div>
     </nav>
   </header>
 </template>
+
+<script setup>
+import { navlinks } from '~/data/data';
+import ApplicationName from './ui/ApplicationName.vue';
+import Button from './ui/Button.vue';
+import Whatsapp from './icon/Whatsapp.vue';
+
+const isMenuOpen = ref(false);
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const handleScroll = (e) => {
+  const href = e.target.getAttribute('href');
+  const targetId = href.replace('#', '').replace('/', '');
+  const el = document.getElementById(targetId);
+
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.scrollY - 60;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    toggleMenu();
+  } else {
+    sessionStorage.setItem('scrollTarget', targetId);
+    window.location.href = href;
+  }
+};
+
+onMounted(() => {
+  const targetId = sessionStorage.getItem('scrollTarget');
+  if (targetId) {
+    const el = document.getElementById(targetId);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 60;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    sessionStorage.removeItem('scrollTarget');
+  }
+});
+
+
+</script>

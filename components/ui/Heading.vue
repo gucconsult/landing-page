@@ -6,27 +6,26 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  title: String,
-  subtitle: String,
-  variant: {
-    type: String,
-    default: 'default'
-  },
-  position: {
-    type: String,
-    default: 'start'
-  }
+type Variant = 'default' | 'white'
+type Position = 'start' | 'center'
+
+const props = withDefaults(defineProps<{
+  title: string
+  subtitle: string
+  variant?: Variant
+  position?: Position
+}>(), {
+  variant: 'default',
+  position: 'start'
 })
 
-const color = {
-  default: 'text-gray-900',
+const color: Record<Variant, string> = {
+  default: 'text-dark',
   white: 'text-white'
 }
 
-const positionClass = {
-  start: 'sm:text-start',
-  center: 'sm:text-center',
+const positionClass: Record<Position, string> = {
+  start: 'lg:text-start',
+  center: 'lg:text-center'
 }
-
 </script>
