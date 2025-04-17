@@ -2,10 +2,38 @@
 
 @theme {
   --font-sans: "Inter", sans-serif;
-  --color-primary: #27374e;
-  --color-secondary: #ff9a00;
-  --color-dark: #1D1D1D;
+  --color-primary: #ff9a00;
+  --color-background: #27374e;
+  --color-dark: #282828;
   --color-muted: #e4e6ea;
-  --bg-primary: #27374e;
-  --bg-secondary: #ff9a00;
+  --bg-background: #27374e;
+  --bg-primary: #ff9a00;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-display: swap;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 60s linear infinite;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
 }
