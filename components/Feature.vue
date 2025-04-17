@@ -1,5 +1,5 @@
 <template>
-  <SectionLayout>
+  <SectionLayout id="beranda">
     <Heading title="Kami akan menemani perjalanan sukses anda" subtitle="Bersama kami anda akan mendapatkan" />
     <div class="mt-8 flex gap-5 flex-col md:flex-row">
       <FeatureDetail v-for="feature in features" :key="feature.id" :title="feature.title"

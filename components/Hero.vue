@@ -1,13 +1,5 @@
 <template>
-  <div class="">
-    <img src="../assets/images/banner.webp" alt="banner" class="w-full mx-auto mt-19">
-  </div>
+  <section class="w-full h-[calc(100vh-200px)]">
+    <img src="../assets/images/banner.webp" alt="banner" class="object-cover w-full h-full">
+  </section>
 </template>
-
-<script lang="ts" setup>
-
-</script>
-
-<style>
-
-</style>

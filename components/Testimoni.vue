@@ -1,5 +1,5 @@
 <template>
-  <SectionLayout>
+  <SectionLayout id="testimoni">
     <Heading position="center" title="Apa kata mereka?"
       subtitle="Testimoni pengguna layanan GlowUp Career Consultant" />
     <div class="relative overflow-hidden mt-8 py-1">
@@ -23,23 +23,3 @@ import Heading from '~/components/ui/Heading.vue';
 import TestimoniCard from '~/components/ui/TestimoniCard.vue';
 import { testimonials } from "~/data/data";
 </script>
-
-<style scoped>
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-slide {
-  animation: slide 60s linear infinite;
-}
-
-.animate-slide:hover {
-  animation-play-state: paused;
-}
-</style>
