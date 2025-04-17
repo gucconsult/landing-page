@@ -1,16 +1,17 @@
-import whatsapp from "~/assets/images/whatsapp.svg";
-import instagram from "~/assets/images/instagram.svg";
-import linkedin from "~/assets/images/linkedin.svg";
-import tiktok from "~/assets/images/tiktok.svg";
-import chartLine from "~/assets/images/chart-line.svg";
-import personTie from "~/assets/images/person-tie.svg";
-import money from "~/assets/images/money.svg";
+import Whatsapp from "~/components/icon/Whatsapp.vue";
+import Instagram from "~/components/icon/Instagram.vue";
+import Linkedin from "~/components/icon/Linkedin.vue";
+import ChartLine from "~/components/icon/ChartLine.vue";
+import Tiktok from "~/components/icon/Tiktok.vue";
+import PersonTie from "~/components/icon/PersonTie.vue";
+import Money from "~/components/icon/Money.vue";
 
 type ServicePrice = {
   id: number;
   title: string;
   price: string;
   benefits: Array<string>;
+  link: string;
 };
 
 type Testimoni = {
@@ -21,24 +22,43 @@ type Testimoni = {
   date: string;
 };
 
-export const features = [
+type Navlink = {
+  href: string;
+  text: string;
+};
+
+type Contact = {
+  id: number;
+  icon: Object;
+  text: string;
+  link: string;
+};
+
+type Feature = {
+  id: number;
+  title: string;
+  description: string;
+  icon: Object;
+};
+
+export const features: Feature[] = [
   {
     id: 1,
     title: "Bimbingan Karier",
     description: "Bimbingan karier sesuai dengan bidang yang ingin anda pilih",
-    icon: chartLine,
+    icon: ChartLine,
   },
   {
     id: 2,
     title: "Tim Berpengalaman",
     description: "Tim yang berpengalaman dan profesional siap membantu anda",
-    icon: personTie,
+    icon: PersonTie,
   },
   {
     id: 3,
     title: "Harga Terjangkau",
     description: "Harga yang terjangkau dengan tetap mengutamakan kualitas",
-    icon: money,
+    icon: Money,
   },
 ];
 
@@ -56,6 +76,7 @@ export const servicesPrice: ServicePrice[] = [
       "Jaminan lolos 100% ATS (Applicant Tracking System)",
       "Revisi 2 kali dan bonus e-book psikotes",
     ],
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 2,
@@ -70,6 +91,7 @@ export const servicesPrice: ServicePrice[] = [
       "Jaminan lolos 100% ATS (Applicant Tracking System)",
       "Revisi 2 kali dan bonus e-book psikotes",
     ],
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 3,
@@ -86,6 +108,7 @@ export const servicesPrice: ServicePrice[] = [
       "Grup loker terupdate setiap hari",
       "Latihan wawancara kerja secara privat",
     ],
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 4,
@@ -104,44 +127,52 @@ export const servicesPrice: ServicePrice[] = [
       "Grup loker terupdate setiap hari",
       "2x seminggu melakukan wawancara secara privat",
     ],
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
 ];
 
-export const servicePriceUnit = [
+export const servicePriceUnits: Omit<ServicePrice, "benefits">[] = [
   {
     id: 1,
     title: "CV Kreatif",
     price: "Rp25.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 2,
     title: "CV ATS",
     price: "Rp30.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 3,
     title: "Surat Lamaran",
     price: "Rp20.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 4,
     title: "Portofolio Digital",
     price: "Rp60.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 5,
     title: "Upgrade Linkedin",
     price: "Rp40.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 6,
     title: "Pelatihan Interview",
     price: "Rp40.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 7,
     title: "Paket Review",
     price: "Rp10.000",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
 ];
 
@@ -206,25 +237,52 @@ export const testimonials: Testimoni[] = [
   },
 ];
 
-export const contacts = [
+export const contacts: Contact[] = [
   {
     id: 1,
-    icon: whatsapp,
+    icon: Whatsapp,
     text: "0859-2028-4085",
+    link: "https://api.whatsapp.com/send/?phone=6285920284085",
   },
   {
     id: 2,
-    icon: instagram,
+    icon: Instagram,
     text: "@glowup_career",
+    link: "https://www.instagram.com/glowup_career",
   },
   {
     id: 3,
-    icon: tiktok,
-    text: "Glowup Career Consultant",
+    icon: Tiktok,
+    text: "@glowupcareerconsultant",
+    link: "https://www.tiktok.com/@glowupcareerconsultant",
   },
   {
     id: 4,
-    icon: linkedin,
+    icon: Linkedin,
     text: "Glowup Career Consultant",
+    link: "https://www.linkedin.com/company/glowup-career-consultant",
+  },
+];
+
+export const navlinks: Navlink[] = [
+  {
+    href: "/",
+    text: "Beranda",
+  },
+  {
+    href: "/#layanan",
+    text: "Layanan",
+  },
+  {
+    href: "/#tentang",
+    text: "Tentang Kami",
+  },
+  {
+    href: "/#testimoni",
+    text: "Testimoni",
+  },
+  {
+    href: "/#kontak",
+    text: "Kontak",
   },
 ];
