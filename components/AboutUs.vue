@@ -1,8 +1,8 @@
 <template>
   <SectionLayout id="tentang">
     <div class="flex flex-col items-center lg:flex-row gap-4 lg:gap-12">
-      <NuxtImg src="/assets/images/about-us.webp" alt="Interview Session" class="w-full rounded-sm max-w-xl" width="700"
-        height="480" loading="lazy" :placeholder="[700, 480]" />
+      <NuxtImg src="/assets/images/about-us.webp" alt="Interview Session" class="w-full rounded-sm max-w-xl" width="860"
+        height="560" loading="lazy" :placeholder="[860, 560]" size="100vw sm:860px" />
       <div class="space-y-2">
         <h3 class="text-2xl font-bold text-dark">Apa itu GlowUp Career Consultant?</h3>
         <article class="leading-relaxed text-justify text-dark">
