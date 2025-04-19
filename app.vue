@@ -5,18 +5,15 @@
 </template>
 
 <script lang="ts" setup>
-const APP_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : process.env.APP_URL
+const APP_URL = process.env.APP_URL || 'http://localhost:3000'
 useHead({
   htmlAttrs: {
     lang: 'id'
   },
-  bodyAttrs: {
-    class: 'font-sans antialiased'
-  },
   link: [
     {
       rel: 'icon',
-      type: 'image/png',
+      type: 'image/ico',
       href: '/favicon.ico'
     }
   ]
@@ -27,11 +24,11 @@ useSeoMeta({
   description: 'GlowUp Career Consultant adalah start-up pengembangan karir yang menawarkan layanan lengkap, termasuk pembuatan/review CV, optimasi portofolio, LinkedIn, pelatihan interview, serta career coaching',
   ogTitle: 'GlowUp Career Consultant',
   ogDescription: 'GlowUp Career Consultant adalah start-up pengembangan karir yang menawarkan layanan lengkap, termasuk pembuatan/review CV, optimasi portofolio, LinkedIn, pelatihan interview, serta career coaching',
-  ogImage: `${APP_URL}/og-image.webp`,
+  ogImage: `${APP_URL}/assets/images/about-us.webp`,
   ogUrl: APP_URL,
   twitterTitle: 'GlowUp Career Consultant',
   twitterDescription: 'GlowUp Career Consultant adalah start-up pengembangan karir yang menawarkan layanan lengkap, termasuk pembuatan/review CV, optimasi portofolio, LinkedIn, pelatihan interview, serta career coaching',
-  twitterImage: `${APP_URL}/og-image.webp`,
-  twitterCard: 'summary'
+  twitterImage: `${APP_URL}/assets/images/about-us.webp`,
+  twitterCard: 'summary_large_image'
 })
 </script>
