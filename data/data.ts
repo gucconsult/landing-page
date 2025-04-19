@@ -76,7 +76,7 @@ export const servicesPrice: ServicePrice[] = [
       "Jaminan lolos 100% ATS (Applicant Tracking System)",
       "Revisi 2 kali dan bonus e-book psikotes",
     ],
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Pemula 1"),
   },
   {
     id: 2,
@@ -91,7 +91,7 @@ export const servicesPrice: ServicePrice[] = [
       "Jaminan lolos 100% ATS (Applicant Tracking System)",
       "Revisi 2 kali dan bonus e-book psikotes",
     ],
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Pemula 2"),
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ export const servicesPrice: ServicePrice[] = [
       "Grup loker terupdate setiap hari",
       "Latihan wawancara kerja secara privat",
     ],
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Siap Kerja"),
   },
   {
     id: 4,
@@ -127,7 +127,7 @@ export const servicesPrice: ServicePrice[] = [
       "Grup loker terupdate setiap hari",
       "2x seminggu melakukan wawancara secara privat",
     ],
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Langsung Kerja"),
   },
 ];
 
@@ -136,43 +136,43 @@ export const servicePriceUnits: Omit<ServicePrice, "benefits">[] = [
     id: 1,
     title: "CV Kreatif",
     price: "Rp25.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("CV Kreatif"),
   },
   {
     id: 2,
     title: "CV ATS",
     price: "Rp30.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("CV ATS"),
   },
   {
     id: 3,
     title: "Surat Lamaran",
     price: "Rp20.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Surat Lamaran"),
   },
   {
     id: 4,
     title: "Portofolio Digital",
     price: "Rp60.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Portofolio Digital"),
   },
   {
     id: 5,
     title: "Upgrade Linkedin",
     price: "Rp40.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Upgrade Linkedin"),
   },
   {
     id: 6,
     title: "Pelatihan Interview",
     price: "Rp40.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Pelatihan Interview"),
   },
   {
     id: 7,
     title: "Paket Review",
     price: "Rp10.000",
-    link: "https://api.whatsapp.com/send/?phone=6285920284085",
+    link: generateWhatsappLink("Review"),
   },
 ];
 

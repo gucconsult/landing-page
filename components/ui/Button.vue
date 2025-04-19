@@ -9,7 +9,8 @@ const sizeClassMap = {
 
 const variantClassMap = {
   primary: 'bg-primary text-white hover:bg-orange-500 focus:ring-primary',
-  text: 'text-primary hover:text-primary-hover',
+  secondary: 'text-white focus:ring-white border border-white',
+  text: 'text-primary',
 } as const
 
 type Size = keyof typeof sizeClassMap
