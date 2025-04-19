@@ -4,7 +4,3 @@
     <span class="lg:hidden text-lg text-primary">GUCC</span>
   </NuxtLink>
 </template>
-
-<script lang="ts" setup>
-import brand from '~/assets/images/logo.webp'
-</script>
