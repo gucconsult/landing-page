@@ -2,7 +2,7 @@
   <div class="max-w-xs px-4 py-3 border border-gray-200 rounded-sm shadow-sm">
     <div class="flex gap-3">
       <div class="h-10 w-10 rounded-full overflow-hidden">
-        <img :src="avatar" class="object-center object-cover w-11 h-11" alt="user">
+        <NuxtImg src="/assets/images/default.webp" class="object-center object-cover w-11 h-11" :alt="name" />
       </div>
       <div class="flex flex-col">
         <span class="font-bold text-dark">{{ name }}</span>
@@ -19,7 +19,6 @@
 </template>
 
 <script lang="ts" setup>
-import avatar from '~/assets/images/default.webp';
 defineProps({
   name: String,
   job: String,

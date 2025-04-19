@@ -1,8 +1,7 @@
 <template>
   <SectionLayout id="tentang">
     <div class="flex flex-col items-center lg:flex-row gap-4 lg:gap-12">
-      <img :src="aboutImage" alt="Interview Session" class="w-full rounded-sm max-w-xl" loading="lazy" width="400"
-        height="400">
+      <NuxtImg src="/assets/images/about-us.webp" alt="Interview Session" class="w-full rounded-sm max-w-xl" />
       <div class="space-y-2">
         <h3 class="text-2xl font-bold text-dark">Apa itu GlowUp Career Consultant?</h3>
         <article class="text-sm leading-relaxed text-justify text-dark">
@@ -20,5 +19,4 @@
 
 <script lang="ts" setup>
 import SectionLayout from '~/layouts/SectionLayout.vue';
-import aboutImage from "~/assets/images/about-us.webp"
 </script>
