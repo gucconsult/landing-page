@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <main class="mt-18">
+  <main class="mt-17">
     <Hero />
     <Feature />
     <PricingList />
