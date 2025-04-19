@@ -1,6 +1,6 @@
 <template>
-  <header class="bg-background/95 backdrop-blur-sm w-full fixed top-0 left-0 z-50 border-b border-gray-700">
-    <nav class="text-white max-w-7xl mx-auto p-4">
+  <header class="bg-white/85 backdrop-blur-sm w-full fixed top-0 left-0 z-50 border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto p-4">
       <div class="container mx-auto flex justify-between items-center">
         <ApplicationName />
         <div class="flex gap-6 items-center">

@@ -1,8 +1,6 @@
 <template>
   <NuxtLink to="/" class="flex items-center gap-3 font-bold">
-    <img :src="brand" alt="GlowUp Career Consultant" class="rounded-full size-10" width="40" height="40"
-      loading="lazy" />
-    <span class="hidden lg:block text-lg">GlowUp Career Consultant</span>
+    <span class="hidden lg:block text-lg"><span class="text-primary">GlowUp</span> Career Consultant</span>
   </NuxtLink>
 </template>
 
