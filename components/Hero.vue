@@ -7,7 +7,7 @@
       <div class="max-w-7xl mx-auto px-4 flex items-center h-full">
         <div class="w-full lg:w-1/2 flex flex-col gap-4">
           <h1 class="text-[42px] font-bold text-white leading-snug">Temukan Versi Profesional Terbaik Dirimu</h1>
-          <p class="text-white">Bersama Glowup Career Consultant, bangun personal branding yang kuat dan raih
+          <p class="text-white">Bersama GlowUp Career Consultant, bangun personal branding yang kuat dan raih
             karier impianmu dengan
             bimbingan ahli yang terpercaya.</p>
           <div class="flex gap-3">
@@ -15,7 +15,7 @@
               icon-position="left" :target="'_blank'">
               Konsultasi
             </Button>
-            <Button as="NuxtLink" variant="secondary" size="lg" to="/price">
+            <Button class="hover:bg-white hover:text-background" as="NuxtLink" variant="secondary" size="lg" to="/price">
               Layanan Kami
             </Button>
           </div>

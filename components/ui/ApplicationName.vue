@@ -1,6 +1,5 @@
 <template>
   <NuxtLink to="/" class="flex items-center gap-3 font-bold">
-    <span class="hidden lg:block text-lg"><span class="text-primary">GlowUp</span> Career Consultant</span>
-    <span class="lg:hidden text-lg text-primary">GUCC</span>
+    <img src="../../public/assets/images/logo.webp" alt="Logo" class="rounded-full h-14">
   </NuxtLink>
 </template>
