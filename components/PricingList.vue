@@ -7,7 +7,7 @@
       <PricingCard v-for="service in servicesPrice" :key="service.id" :title="service.title" :price="service.price"
         :benefits="service.benefits" :isShowMore="service.benefits.length > LIMIT" :link="service.link" />
     </div>
-    <div class="w-full flex justify-center lg:justify-end mt-5">
+    <div class="w-full flex justify-center hover:underline lg:justify-end mt-5">
       <Button as="NuxtLink" to="/price" size="text" variant="text" :icon="ArrowRight" icon-position="right">
         Lihat Semua
       </Button>

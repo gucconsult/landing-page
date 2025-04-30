@@ -10,7 +10,7 @@
                 <span class="text-sm text-dark">{{ benefit }}</span>
             </li>
         </ul>
-        <Button variant="text" v-if="isShowMore" @click="toggleFullBenefit">
+        <Button class="hover:text-amber-400" variant="text" v-if="isShowMore" @click="toggleFullBenefit">
             {{ showFullBenefit ? 'Lebih sedikit' : 'Lebih banyak' }}
         </Button>
     </div>
