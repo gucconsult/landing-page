@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white/50 backdrop-blur-3xl w-full fixed top-0 left-0 z-50 border-b border-gray-100">
+  <header class="bg-white/80 backdrop-blur-3xl w-full fixed top-0 left-0 z-50 border-b border-gray-100">
     <nav class="max-w-7xl mx-auto p-2">
       <div class="container mx-auto flex justify-between items-center">
         <ApplicationName />
